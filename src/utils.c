@@ -497,7 +497,9 @@ int get_ip_by_ifname(char *ifname, struct in_addr *retaddr) {
          ifflags=ifa->ifa_flags;
          DEBUGC(DBCLASS_BABBLE,"getifaddrs - MATCH, sin_addr=%s",
                 utils_inet_ntoa(ifaddr));
+#if 0
          break;
+#endif
       }
    }
    freeifaddrs(ifa_list);
